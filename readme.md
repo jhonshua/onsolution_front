@@ -36,22 +36,29 @@ Opciones para filtrar y ordenar productos (All, Newest, Popular).
 Detalles del producto (Product Details):
 
 Imágenes del producto.
-Nombre y descripción del producto (Light Brown Jacket, Lorem ipsum...).
+
+Nombre y descripción del producto .
 Opciones de tamaño (Select Size).
 Opciones de color (Select Color).
 Precio total (Total Price).
 Botón para añadir al carrito (Add to Cart).
-Tecnologías recomendadas
+
+# Tecnologías empleadas
+
 React Native: Para construir la aplicación móvil.
 Expo: Para facilitar el desarrollo y despliegue de la aplicación.
+
 Componentes de React Native: Para crear la interfaz de usuario.
+
 Estilos con CSS o Styled Components: Para dar estilo a la aplicación.
+
 Navegación con React Navigation: Para permitir la navegación entre pantallas.
-Gestión de estado con Redux o Context API: Para gestionar los datos de la aplicación.
+
+Gestión de estado con Context : Para gestionar los datos de la aplicación.
+
 Librerías para peticiones HTTP (Axios o Fetch API): Para comunicarte con un servidor y obtener los datos de los productos.
 
 Base de datos (Firebase, Supabase, etc.): Para almacenar los datos de los productos, usuarios y pedidos.
-
 
 Integración: Conecta con una base de datos y un servidor para obtener los datos de los productos y gestionar los pedidos.
 
