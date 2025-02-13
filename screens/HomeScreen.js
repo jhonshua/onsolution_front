@@ -47,6 +47,9 @@ const HomeScreen = () => {
 
   return (
     <ScrollView style={styles.container}>
+
+      {/* Barra de notificaciones en la parte superior y ubicacion */}
+
       {/* Barra de búsqueda en la parte superior */}
       <View style={styles.searchBarContainer}>
         <SearchBar onSearch={handleSearch} />
