@@ -10,31 +10,28 @@ import {
 } from "react-native";
 import HeaderDetails from "../components/HeaderDetails";
 import ButtonAdd from "../components/ButtonAdd";
-import { CartContext } from "../context/CartContext"; // Importa el contexto
+import { CartContext } from "../context/CartContext";
+import { Ionicons } from "@expo/vector-icons";
 
 const DetailsScreen = ({ route, navigation }) => {
-  const { product } = route.params; // Obtenemos el producto de la ruta
-  const [selectedSize, setSelectedSize] = useState(null); // Estado para la talla seleccionada
-  const [selectedColor, setSelectedColor] = useState(null); // Estado para el color seleccionado
-  const [isColorPickerOpen, setIsColorPickerOpen] = useState(false); // Estado para controlar la pestaña de colores
+  const { product } = route.params;
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
 
-  const { addToCart } = useContext(CartContext); // Obtenemos la función addToCart del contexto
+  const { addToCart } = useContext(CartContext);
 
-  // Lista de tallas disponibles
   const sizes = ["S", "M", "L", "XL", "XXL"];
-
-  // Lista de colores disponibles (obtenida del producto)
   const colors = product.color || [];
 
-  // Función para manejar el evento de agregar al carrito
   const handleAddToCart = () => {
     const productToAdd = {
       ...product,
       selectedSize,
       selectedColor,
     };
-    addToCart(productToAdd); // Agregamos el producto al carrito
-    navigation.navigate("Carrito"); // Navegamos a la pantalla del carrito
+    addToCart(productToAdd);
+    navigation.navigate("Carrito");
   };
 
   return (
@@ -42,9 +39,18 @@ const DetailsScreen = ({ route, navigation }) => {
       <HeaderDetails navigation={navigation} />
       <ScrollView contentContainerStyle={styles.content}>
         <Image source={{ uri: product.url }} style={styles.image} />
-        <Text style={styles.name}>{product.name}</Text>
-        <Text style={styles.price}>${product.precio.toFixed(2)}</Text>
-        <Text style={styles.category}>Categoría: {product.categoria}</Text>
+
+        {/* Contenedor para los textos */}
+        <View style={styles.textContainer}>
+          <View style={styles.nameContainer}>
+            <Text style={styles.name}>{product.name}</Text>
+            <Text style={styles.puntuacion}>{product.puntuacion}</Text>
+            <Ionicons style={styles.star} name="star" size={24} color="#FFD700" />
+          </View>
+          <Text style={styles.price}>${product.precio.toFixed(2)}</Text>
+          <Text style={styles.category}>Categoría: {product.categoria}</Text>
+        </View>
+
         <Text style={styles.filters}>{product.nota}</Text>
 
         {/* Selector de tallas */}
@@ -55,14 +61,14 @@ const DetailsScreen = ({ route, navigation }) => {
               key={size}
               style={[
                 styles.sizeButton,
-                selectedSize === size && styles.sizeButtonActive, // Aplica estilo activo si está seleccionado
+                selectedSize === size && styles.sizeButtonActive,
               ]}
-              onPress={() => setSelectedSize(size)} // Cambia la talla seleccionada
+              onPress={() => setSelectedSize(size)}
             >
               <Text
                 style={[
                   styles.sizeText,
-                  selectedSize === size && styles.sizeTextActive, // Aplica estilo activo si está seleccionado
+                  selectedSize === size && styles.sizeTextActive,
                 ]}
               >
                 {size}
@@ -76,13 +82,13 @@ const DetailsScreen = ({ route, navigation }) => {
           <Text style={styles.color}>Select Color:</Text>
           <TouchableOpacity
             style={styles.colorPickerHeader}
-            onPress={() => setIsColorPickerOpen(!isColorPickerOpen)} // Abre/cierra la pestaña
+            onPress={() => setIsColorPickerOpen(!isColorPickerOpen)}
           >
             <Text>Colors</Text>
           </TouchableOpacity>
         </View>
 
-        {/* Lista de colores (se muestra solo si la pestaña está abierta) */}
+        {/* Lista de colores */}
         {isColorPickerOpen && (
           <View style={styles.colorContainer}>
             {colors.map((color, index) => (
@@ -90,10 +96,10 @@ const DetailsScreen = ({ route, navigation }) => {
                 key={index}
                 style={[
                   styles.colorButton,
-                  selectedColor === color && styles.colorButtonActive, // Aplica estilo activo si está seleccionado
-                  { backgroundColor: color }, // Fondo del botón según el color
+                  selectedColor === color && styles.colorButtonActive,
+                  { backgroundColor: color },
                 ]}
-                onPress={() => setSelectedColor(color)} // Cambia el color seleccionado
+                onPress={() => setSelectedColor(color)}
               >
                 {selectedColor === color && (
                   <Text style={styles.colorButtonText}>✓</Text>
@@ -110,16 +116,14 @@ const DetailsScreen = ({ route, navigation }) => {
   );
 };
 
-// Estilos de la pantalla (sin cambios)
+// Estilos de la pantalla
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    marginTop: 30,
   },
   content: {
     padding: 16,
-    alignItems: "center",
   },
   image: {
     width: "100%",
@@ -128,21 +132,43 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     marginBottom: 16,
   },
+  textContainer: {
+    width: "100%", // Ocupa todo el ancho disponible
+    marginBottom: 16,
+  },
+  nameContainer: {
+    flexDirection: "row", // Coloca el nombre y la estrella en una fila
+    alignItems: "center", // Alinea verticalmente al centro
+    marginBottom: 8,
+    
+  },
   name: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 8,
-    textAlign: "center",
+    marginRight: 8, // Espacio entre el nombre y la estrella
+  },
+  puntuacion:{
+    fontSize: 16,
+    color: "#666",
+    marginLeft:"7%"
+
+    
+  },
+  star:{
+    marginLeft:5
+  
   },
   price: {
     fontSize: 20,
     color: "#6b4f3b",
     marginBottom: 8,
+    textAlign: "left", // Alineación a la izquierda
   },
   category: {
     fontSize: 16,
     color: "#666",
     marginBottom: 8,
+    textAlign: "left", // Alineación a la izquierda
   },
   filters: {
     fontSize: 16,
@@ -151,7 +177,6 @@ const styles = StyleSheet.create({
   },
   size: {
     fontSize: 20,
-    width: 320,
     marginBottom: 8,
   },
   sizeContainer: {
@@ -169,26 +194,26 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: 8,
-    backgroundColor: "#fff", // Fondo blanco por defecto
+    backgroundColor: "#fff",
   },
   sizeButtonActive: {
-    backgroundColor: "#6b4f3b", // Fondo marrón cuando está activo
+    backgroundColor: "#6b4f3b",
   },
   sizeText: {
     fontSize: 16,
-    color: "#000", // Texto negro por defecto
+    color: "#000",
   },
   sizeTextActive: {
-    color: "#fff", // Texto blanco cuando está activo
+    color: "#fff",
   },
   colorHeaderContainer: {
-    flexDirection: "row", // Coloca los elementos en una fila
-    alignItems: "center", // Alinea verticalmente al centro
+    flexDirection: "row",
+    alignItems: "center",
     marginBottom: 8,
   },
   color: {
     fontSize: 16,
-    marginRight: 8, // Espacio entre el texto y el botón
+    marginRight: 8,
   },
   colorPickerHeader: {
     padding: 8,

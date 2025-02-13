@@ -7,7 +7,8 @@
         "precio": 29.99,
         "filtros": ["Woman", "Popular"] ,
         "nota":"This jacket is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable.  It's the perfect combination of style and comfort. ",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":53
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages1.png?alt=media&token=3281fe2b-4774-4743-a1ef-74a8663af287",
@@ -15,7 +16,8 @@
         "categoria": "dress",
         "precio": 49.99,
         "filtros": ["Woman"],
-        "nota":"This dress is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable"
+        "nota":"This dress is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable",
+        "puntuacion":50
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages2.png?alt=media&token=2f44702b-9b0d-4369-81a4-1bef5149b09d",
@@ -24,7 +26,8 @@
         "precio": 99.99,
         "filtros": ["Woman", "Newest"],
         "nota":"This dress is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":49
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages3.png?alt=media&token=7b6da7f1-2b1a-4cdf-875a-8eea41071ba4",
@@ -33,7 +36,8 @@
         "precio": 59.99,
         "filtros": ["Woman", "Popular"] ,
         "nota":"This dress is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":70
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages4.png?alt=media&token=fccdcfbe-09e2-49f1-b5ec-351151206be1",
@@ -42,7 +46,8 @@
         "precio": 39.99,
         "filtros": ["Woman", "Popular", "Popular"],
         "nota":"This dress is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":83
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages5.png?alt=media&token=c65186b7-5232-418a-8542-dfffa00d0968",
@@ -51,7 +56,8 @@
         "precio": 69.99,
         "filtros": ["Woman", "Popular", "Popular"],
         "nota":"This dress is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":99
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages7.png?alt=media&token=c9f8db14-57d8-452e-bf9a-8fef0cccc9a9",
@@ -60,7 +66,8 @@
         "precio": 79.99,
         "filtros": ["Woman", "Popular", "Popular"],
         "nota":"This dress is absolutely stunning! The color is vibrant and the fabric is so soft and comfortable",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":58
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages8.png?alt=media&token=24d5427b-4369-4d74-b775-da3c329e149a",
@@ -69,7 +76,8 @@
         "precio": 129.99,
         "filtros": ["Woman", "Popular"],
         "nota":" I love the way it looks and feels, and I know I'll be wearing it all the time. ",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":23
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages9.png?alt=media&token=234eadd4-cb2c-40bd-93e8-8b1276ef052e",
@@ -78,7 +86,8 @@
         "precio": 19.99,
         "filtros": ["Woman"],
         "note":" I'm so impressed with the craftsmanship and I know I'll be wearing this jacket for years to come",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":23
       },
       {
         "url": "https://firebasestorage.googleapis.com/v0/b/odontologia-app-1776f.appspot.com/o/onsolution%2Fimages10.png?alt=media&token=45a2102d-c69e-4f94-951c-f77ac68824ae",
@@ -87,7 +96,8 @@
         "precio": 34.99,
         "filtros": ["Woman", "popular"],
         "note":" I'm so impressed with the craftsmanship and I know I'll be wearing this jacket for years to come",
-        "color":["red", "brown", "blue", "black"]
+        "color":["red", "brown", "blue", "black"],
+        "puntuacion":97
       }
     ]
   }

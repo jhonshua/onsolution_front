@@ -8,14 +8,14 @@ const ButtonAdd = ({ price, onAddToCart }) => {
     <View style={styles.container}>
       {/* Lado izquierdo: Precio */}
       <View style={styles.priceContainer}>
-        <Text style={styles.totalText}>Total</Text>
+        <Text style={styles.totalText}>Total Price</Text>
         <Text style={styles.priceText}>${price.toFixed(2)}</Text>
       </View>
 
       {/* Lado derecho: Botón "Add to Cart" */}
       <TouchableOpacity style={styles.addButton} onPress={onAddToCart}>
+        <Ionicons name="basket" size={20} color="#fff" style={styles.icon} />
         <Text style={styles.addButtonText}>Add to Cart</Text>
-        <Ionicons name="cart" size={20} color="#fff" style={styles.icon} />
       </TouchableOpacity>
     </View>
   );
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   priceText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "#6b4f3b",
+    color: "black",
   },
   addButton: {
     flexDirection: "row",
@@ -56,11 +56,10 @@ const styles = StyleSheet.create({
   addButtonText: {
     fontSize: 16,
     color: "#fff",
-    fontWeight: "bold",
-    marginRight: 8, // Espacio entre el texto y el ícono
+    fontWeight: "bold"
   },
   icon: {
-    marginLeft: 4, // Espacio entre el texto y el ícono
+    marginRight: 8, // Espacio entre el texto y el ícono
   },
 });
 
