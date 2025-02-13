@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jhonshua.front_onsolution"
+      "package": "com.jhonshua.front_onsolution",
+      "buildType": "apk"  
     },
     "web": {
       "favicon": "./assets/favicon.png"

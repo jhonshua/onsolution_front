@@ -101,14 +101,14 @@ const styles = StyleSheet.create({
     backgroundColor:'#ffffff'
   },
   carouselContent: {
-    paddingHorizontal: 50, // Margen horizontal
+    paddingHorizontal: 50, 
   },
   slide: {
-    width: screenWidth - 60, // Ajusta el ancho para compensar el mayor margen
+    width: screenWidth - 60, 
     height: 140,
     borderRadius: 15,
     overflow: "hidden",
-    marginHorizontal: 20, // Aumenta el margen entre slides
+    marginHorizontal: 20, 
   },
   image: {
     width: "100%",

@@ -14,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <Ionicons name="search" size={20} color="#999" style={styles.searchIcon} />{/* Lupa dentro del input */}
+        <Ionicons name="search" size={20} color="#999" style={styles.searchIcon} />
         <TextInput
           style={styles.input}
           placeholder="Search..."
@@ -25,7 +25,7 @@ const SearchBar = ({ onSearch }) => {
         />
       </View>
       <TouchableOpacity onPress={handleSearch} style={styles.button}>
-        <Ionicons name="options" size={20} color="#ffff" />{/* Icono de controles */}
+        <Ionicons name="options" size={20} color="#ffff" />
       </TouchableOpacity>
     </View>
   );
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     flex: 1,
-    flexDirection: 'row', // Para alinear la lupa y el texto horizontalmente
-    alignItems: 'center', // Para centrar verticalmente la lupa y el texto
+    flexDirection: 'row',
+    alignItems: 'center', 
     height: 50,
     backgroundColor: "#fff",
     borderRadius: 5,
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 3,
   },
-  searchIcon: { // Estilos para el icono de búsqueda dentro del input
-    marginRight: 10, // Espacio entre el icono y el texto
+  searchIcon: { 
+    marginRight: 10, 
   },
   input: {
     flex: 1,

@@ -50,7 +50,7 @@ const ProductoScreen = ({ navigation }) => {
   );
 };
 
-// Estilos de la pantalla (sin cambios)
+// Estilos de la pantalla 
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -49,36 +49,36 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 16,
     marginTop: 20,
-    backgroundColor: "#fff", // Fondo blanco del contenedor
+    backgroundColor: "#fff", 
   },
   filterButton: {
-    borderRadius: 20, // Botones ovalados
+    borderRadius: 20, 
     paddingHorizontal: 16,
     paddingVertical: 8,
-    borderWidth: 1, // Borde para resaltar cuando no está activo
-    borderColor: "#6b4f3b", // Color del borde
-    shadowColor: "#000", // Sombra
+    borderWidth: 1, 
+    borderColor: "#6b4f3b", 
+    shadowColor: "#000", 
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    elevation: 3, // Sombra en Android
-    marginRight: 8, // Margen entre botones
+    elevation: 3, 
+    marginRight: 8, 
   },
   activeButton: {
-    backgroundColor: "#6b4f3b", // Fondo cuando está activo
+    backgroundColor: "#6b4f3b", 
   },
   inactiveButton: {
-    backgroundColor: "#fff", // Fondo cuando no está activo
+    backgroundColor: "#ffffff", 
   },
   filterText: {
     fontSize: 14,
     fontWeight: "bold",
   },
   activeText: {
-    color: "#fff", // Texto blanco cuando está activo
+    color: "#fff",
   },
   inactiveText: {
-    color: "#000", // Texto negro cuando no está activo
+    color: "#000", 
   },
 });
 

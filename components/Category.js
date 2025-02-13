@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
   circle: {
     width: 64,
     height: 64,
-    borderRadius: 32, // Hace que el contenedor sea una esfera
-    backgroundColor: "#f0f0f0", // Color de fondo de la esfera
+    borderRadius: 32, 
+    backgroundColor: "#f0f0f0", 
     justifyContent: "center",
     alignItems: "center",
   },

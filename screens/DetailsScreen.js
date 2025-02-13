@@ -133,12 +133,12 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   textContainer: {
-    width: "100%", // Ocupa todo el ancho disponible
+    width: "100%", 
     marginBottom: 16,
   },
   nameContainer: {
-    flexDirection: "row", // Coloca el nombre y la estrella en una fila
-    alignItems: "center", // Alinea verticalmente al centro
+    flexDirection: "row", 
+    alignItems: "center", 
     marginBottom: 8,
     
   },
@@ -162,13 +162,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "#6b4f3b",
     marginBottom: 8,
-    textAlign: "left", // Alineación a la izquierda
+    textAlign: "left", 
   },
   category: {
     fontSize: 16,
     color: "#666",
     marginBottom: 8,
-    textAlign: "left", // Alineación a la izquierda
+    textAlign: "left", 
   },
   filters: {
     fontSize: 16,

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   addButton: {
     flexDirection: "row",
     backgroundColor: "#6b4f3b",
-    borderRadius: 25, // Botón ovalado
+    borderRadius: 25, 
     paddingVertical: 12,
     paddingHorizontal: 24,
     alignItems: "center",
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   },
   icon: {
-    marginRight: 8, // Espacio entre el texto y el ícono
+    marginRight: 8, 
   },
 });
 

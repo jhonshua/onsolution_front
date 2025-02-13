@@ -26,7 +26,7 @@ const CarritoScreen = ({ navigation }) => { // Recibimos navigation como prop
 
   return (
     <View style={styles.container}>
-      <HeaderCard navigation={navigation} /> {/* Pasamos navigation a HeaderCard */}
+      <HeaderCard navigation={navigation} /> 
       {cart.length > 0 ? (
         <FlatList
           data={cart}
