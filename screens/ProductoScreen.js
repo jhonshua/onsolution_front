@@ -1,21 +1,14 @@
-// screens/HomeScreen.js
+// screens/ProductoScreen.js
 import React, { useState } from "react";
-import { View, StyleSheet, ScrollView } from "react-native";
-import SearchBar from "../components/SearchBar";
-import PromoCarousel from "../components/PromoCarousel";
+import {StyleSheet, ScrollView } from "react-native";
 import Category from "../components/Category";
-import Oferta from "../components/Oferta";
 import FilterHome from "../components/FilterHome";
 import ProductGrid from "../components/ProductGrid";
 import data from "../data.json";
 
-const HomeScreen = ({ navigation }) => {
+const ProductoScreen = ({ navigation }) => {
   const [products, setProducts] = useState(data.data);
 
-  // Función para manejar la búsqueda
-  const handleSearch = (query) => {
-    console.log("Búsqueda realizada:", query);
-  };
 
   // Función para filtrar productos por categoría
   const filterByCategory = (category) => {
@@ -45,19 +38,8 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <ScrollView style={styles.container}>
-      {/* Barra de búsqueda */}
-      <View style={styles.searchBarContainer}>
-        <SearchBar onSearch={handleSearch} />
-      </View>
-
-      {/* Carrusel de promociones */}
-      <PromoCarousel />
-
       {/* Componente de categorías */}
       <Category onSelectCategory={filterByCategory} />
-
-      {/* Componente de oferta */}
-      <Oferta />
 
       {/* Componente de filtros */}
       <FilterHome onSelectFilter={filterByTag} />
@@ -73,12 +55,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#ffffff",
-  },
-  searchBarContainer: {
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    backgroundColor: "#ffffff",
-  },
+  }
 });
 
-export default HomeScreen;
+export default ProductoScreen;

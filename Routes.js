@@ -8,6 +8,7 @@ import { Ionicons } from "@expo/vector-icons"; // Para los íconos
 // Importa tus pantallas
 import HomeScreen from "./screens/HomeScreen";
 import DetailsScreen from "./screens/DetailsScreen";
+import ProductoScreen from "./screens/ProductoScreen"
 import CarritoScreen from "./screens/CarritoScreen";
 import Login from "./screens/Login";
 
@@ -61,7 +62,7 @@ const BottomTabs = () => {
       />
       <Tab.Screen
         name="Productos"
-        component={DetailsScreen}
+        component={ProductoScreen}
         options={{ headerShown: false }}
       />
       <Tab.Screen
@@ -86,9 +87,11 @@ const Routes = () => {
         <Stack.Screen
           name="Main"
           component={BottomTabs}
-          options={{ headerShown: false }} // Oculta el header para el Bottom Tabs
+          options={{ headerShown: false}} 
         />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen } />
+        <Stack.Screen name="Carrito" component={CarritoScreen } />
+        <Stack.Screen name="Productos" component={ProductoScreen } />
       </Stack.Navigator>
     </NavigationContainer>
   );

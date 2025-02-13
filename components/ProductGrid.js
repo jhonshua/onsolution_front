@@ -1,15 +1,31 @@
 // components/ProductGrid.js
 import React from "react";
-import { View, Text, Image, FlatList, StyleSheet, Dimensions } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  FlatList,
+  StyleSheet,
+  Dimensions,
+  TouchableOpacity,
+} from "react-native";
 
-const ProductGrid = ({ data }) => {
+const ProductGrid = ({ data, navigation }) => {
+  // Función para manejar el clic en un producto
+  const handleProductPress = (item) => {
+    navigation.navigate("Details", { product: item }); // Navegamos a Details con los datos del producto
+  };
+
   // Función para renderizar cada item
   const renderItem = ({ item }) => (
-    <View style={styles.itemContainer}>
+    <TouchableOpacity
+      style={styles.itemContainer}
+      onPress={() => handleProductPress(item)} // Manejamos el clic
+    >
       <Image source={{ uri: item.url }} style={styles.image} />
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.price}>${item.precio.toFixed(2)}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -23,11 +39,11 @@ const ProductGrid = ({ data }) => {
   );
 };
 
-// Estilos del componente
+// Estilos del componente (sin cambios)
 const styles = StyleSheet.create({
   container: {
     padding: 8,
-    marginBottom:90
+    marginBottom: 90,
   },
   itemContainer: {
     flex: 1,
