@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 const ProductGrid = ({ data, navigation }) => {
+
   // Función para manejar el clic en un producto
   const handleProductPress = (item) => {
     navigation.navigate("Details", { product: item }); // Navegamos a Details con los datos del producto

@@ -81,14 +81,11 @@ const BottomTabs = () => {
 
 // Define las rutas principales
 const Routes = () => {
+  
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen
-          name="Main"
-          component={BottomTabs}
-          options={{ headerShown: false}} 
-        />
+        <Stack.Screen name="Main" component={BottomTabs} options={{headerShown: false}} />
         <Stack.Screen name="Details" component={DetailsScreen } />
         <Stack.Screen name="Carrito" component={CarritoScreen } />
         <Stack.Screen name="Productos" component={ProductoScreen } />

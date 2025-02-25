@@ -95,9 +95,11 @@ front_onsolution/
 |   |--  ... otras imagenes
 |
 |-- data.json                    # data local hasta tener una api
-|-- ************************************************************************
+
 
 ```
 
 <br />
+              
+
               

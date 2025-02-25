@@ -10,6 +10,7 @@ import ProductGrid from "../components/ProductGrid";
 import data from "../data.json";
 
 const HomeScreen = ({ navigation }) => {
+  
   const [products, setProducts] = useState(data.data);
 
   // Función para manejar la búsqueda

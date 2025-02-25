@@ -14,7 +14,9 @@ import { CartContext } from "../context/CartContext";
 import { Ionicons } from "@expo/vector-icons";
 
 const DetailsScreen = ({ route, navigation }) => {
+
   const { product } = route.params;
+  
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);

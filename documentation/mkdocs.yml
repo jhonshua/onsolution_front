@@ -1,0 +1,13 @@
+site_name: technical test Documentation
+
+nav:
+
+  - Home: index.md
+  - Estructura: estructura.md
+  - Pantallas: screens.md
+  - Router: router.md
+  - Data: data.md
+  - Components: components.md
+  - Assents: assents.md
+
+theme: readthedocs
